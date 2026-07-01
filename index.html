@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Our Love Letter</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="aurora" aria-hidden="true"></div>
+    <div class="particles" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <main class="keepsake" aria-label="Romantic digital love letter">
+      <section class="topbar" aria-label="Music and reading controls">
+        <button class="icon-button audio-toggle" id="audioToggle" type="button" aria-label="Play music">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path id="playIcon" d="M8 5v14l11-7z"></path><path id="pauseIcon" d="M7 5h4v14H7zm6 0h4v14h-4z"></path></svg>
+        </button>
+        <button class="icon-button mute-toggle" id="muteToggle" type="button" aria-label="Mute music">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"></path><path class="sound-wave" d="M16 8.5c1.1 1 1.7 2.2 1.7 3.5s-.6 2.5-1.7 3.5"></path><path class="sound-wave" d="M18.5 6c1.8 1.7 2.8 3.7 2.8 6s-1 4.3-2.8 6"></path></svg>
+        </button>
+        <div class="reading-status" id="readingStatus">Page 1</div>
+      </section>
+
+      <section class="book-stage">
+        <button class="turn-button previous" id="prevPage" type="button" aria-label="Previous page">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 5 8.5 12l7 7"></path></svg>
+        </button>
+
+        <div class="book" id="book" aria-live="polite"></div>
+
+        <button class="turn-button next" id="nextPage" type="button" aria-label="Next page">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8.5 5 7 7-7 7"></path></svg>
+        </button>
+      </section>
+
+      <section class="mobile-nav" aria-label="Page navigation">
+        <button class="soft-button" id="mobilePrev" type="button">Previous</button>
+        <button class="soft-button primary" id="mobileNext" type="button">Next page</button>
+      </section>
+    </main>
+
+    <audio id="backgroundMusic" preload="metadata" loop></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
